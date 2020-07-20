@@ -1,213 +1,68 @@
 <!DOCTYPE html>
-<html lang="en" dir=>
-
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Tags" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="localhost:1313/tags/" />
-
-<title>Tags | My New Hugo Site</title>
-<link rel="manifest" href="/manifest.json">
-<link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.6cd8553a6854f4812343f0f0c8baca31271e686434f381fbe3c7226f66639176.css" integrity="sha256-bNhVOmhU9IEjQ/DwyLrKMSceaGQ084H748cib2ZjkXY=">
-<script defer src="/en.search.min.d6492ac6b91bd35f346e14d1fdfe206131ab0068e2c183c6d4a43d0e8b62908a.js" integrity="sha256-1kkqxrkb0180bhTR/f4gYTGrAGjiwYPG1KQ9DotikIo="></script>
-<link rel="alternate" type="application/rss+xml" href="localhost:1313/tags/index.xml" title="My New Hugo Site" />
-<!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
-
-  
-</head>
-
-<body dir=>
-  <input type="checkbox" class="hidden toggle" id="menu-control" />
-  <input type="checkbox" class="hidden toggle" id="toc-control" />
-  <main class="container flex">
-    <aside class="book-menu">
-      
-  <nav>
-<h2 class="book-brand">
-  <a href="/"><span>My New Hugo Site</span>
-  </a>
-</h2>
-
-
-<div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
-  <div class="book-search-spinner hidden"></div>
-  <ul id="book-search-results"></ul>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</nav>
-
-
-
-
-  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
-
-
- 
-    </aside>
-
-    <div class="book-page">
-      <header class="book-header">
-        
-  <div class="flex align-center justify-between">
-  <label for="menu-control">
-    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
-  </label>
-
-  <strong>Tags</strong>
-
-  <label for="toc-control">
-    
-    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
-    
-  </label>
-</div>
-
-
-  
-  <aside class="hidden clearfix">
-    
-  <nav>
-  <ul>
-  
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
-
-
-  </aside>
-  
- 
-      </header>
-
-      
-      
-  
-
-  
-
-
- 
-      
-
-      <footer class="book-footer">
-        
-  <div class="flex flex-wrap justify-between">
-
-
-
-
-
-</div>
-
- 
-        
-      </footer>
-
-      
-  
- 
-
-      <label for="menu-control" class="hidden book-menu-overlay"></label>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awesome Brew Cask</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container-fluid p-0 m-0">
+      <div class="row p-0 m-0">
+        <header class="col">
+          <h1>
+            <a href="localhost:1313/">
+              Awesome Brew Cask
+            </a>
+          </h1>
+          <div class="col">
+            <input type="search" id="sBox" />
+          </div>
+        </header>
+      </div>
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        axios.get("localhost:1313\//indexes/my-index.json").then((res) => {
+          var documents = res.data;
+          var idx = lunr(function () {
+            this.ref("name");
+            this.field("text");
 
-    
-    <aside class="book-toc">
-      
-  <nav>
-  <ul>
-  
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
+            documents.forEach(function (doc) {
+              this.add(doc);
+            }, this);
+          });
 
- 
-    </aside>
-    
-  </main>
+          let sBox = document.getElementById("sBox")
+          sBox.addEventListener("change", (e)=>{
+            idx.search( sBox.value )
+          })
 
-  
-</body>
-
+        });
+      });
+    </script>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
