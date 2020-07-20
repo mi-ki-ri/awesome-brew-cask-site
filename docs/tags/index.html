@@ -38,11 +38,11 @@
         </main>
       </div>
       <div class="row p-0 m-0">
-        <footer class="col p-0 ">
-          <button id="laquo" type="button" class="btn btn-light">&laquo</button>
-      </footer>
+        <footer class="col p-0">
+          <button id="laquo" class="btn btn-light" type="button" id="">&laquo;</button>
+          <button id="raquo" type="button" class="btn btn-light">&raquo;</button>
+        </footer>
       </div>
-      
     </div>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -67,17 +67,19 @@
         var start = 0;
         let documents = [];
         let idx = null;
-        await axios.get("https:\/\/mi-ki-ri.github.io\/awesome-brew-cask-site\//indexes/my-index.json").then((res) => {
-          documents = res.data;
-          idx = lunr(function () {
-            this.ref("uri");
-            this.field("content");
+        await axios
+          .get("https:\/\/mi-ki-ri.github.io\/awesome-brew-cask-site\//indexes/my-index.json")
+          .then((res) => {
+            documents = res.data;
+            idx = lunr(function () {
+              this.ref("uri");
+              this.field("content");
 
-            documents.forEach(function (doc) {
-              this.add(doc);
-            }, this);
+              documents.forEach(function (doc) {
+                this.add(doc);
+              }, this);
+            });
           });
-        });
 
         let getData = (word) => {
           let deck = document.getElementById("deck");
@@ -89,7 +91,7 @@
             
             
             
-            .slice( start ,50)
+            .slice(start, 50)
             .forEach((ref) => {
               axios
                 .get("https:\/\/mi-ki-ri.github.io\/awesome-brew-cask-site\/" + "/docs/" + ref.ref)
@@ -101,10 +103,12 @@
                   cardBody.classList.add("card-body");
                   cardBody.innerHTML = get.data;
                   card.appendChild(cardBody);
-                  let cardFooter = document.createElement("footer")
-                  cardFooter.classList.add("card-footer")
-                  cardFooter.innerHTML = `<a href="#${ref.ref.slice(1)}">#${ref.ref.slice(1)}</a>`
-                  card.appendChild(cardFooter)
+                  let cardFooter = document.createElement("footer");
+                  cardFooter.classList.add("card-footer");
+                  cardFooter.innerHTML = `<a href="#${ref.ref.slice(
+                    1
+                  )}">#${ref.ref.slice(1)}</a>`;
+                  card.appendChild(cardFooter);
                   deck.appendChild(card);
 
                   var links = document.links;
@@ -116,7 +120,7 @@
                   ) {
                     if (links[i].hostname != window.location.hostname) {
                       links[i].target = "_self";
-                      links[i].href =  "#" + ref.ref
+                      links[i].href = "#" + ref.ref;
                     }
                   }
                 });
@@ -129,14 +133,25 @@
         });
         getData("*");
 
-        let laquo = document.getElementById("laquo")
-        laquo.addEventListener("click", (e)=>{
-          start += 50
+        let raquo = document.getElementById("raquo");
+        raquo.addEventListener("click", (e) => {
+          start += 50;
 
-          let q = sBox.value == "" ? "*": sBox.value
-          getData(q)
-        })
+          let q = sBox.value == "" ? "*" : sBox.value;
+          getData(q);
+        });
 
+        let laquo = document.getElementById("laquo");
+        laquo.addEventListener("click", (e) => {
+          start -= 50;
+
+          if(start < 0){
+            start = 0
+          }
+
+          let q = sBox.value == "" ? "*" : sBox.value;
+          getData(q);
+        });
       });
     </script>
   </body>
