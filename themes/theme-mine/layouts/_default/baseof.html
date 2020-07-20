@@ -29,7 +29,7 @@
       </div>
       <div class="row">
         <div class="col p-5">
-          <h2>検索結果をランダムに25件表示</h2>
+          <h2>検索結果を全表示</h2>
         </div>
       </div>
       <div class="row">
@@ -79,9 +79,9 @@
           let sch = idx.search(sBox.value);
           // console.log(sch);
           sch
-            .sort(() => {
-              return Math.random() - 0.5;
-            })
+            // .sort(() => {
+            //   return Math.random() - 0.5;
+            // })
             .forEach((ref) => {
               axios
                 .get("{{.Site.BaseURL}}" + "/docs/" + ref.ref)
