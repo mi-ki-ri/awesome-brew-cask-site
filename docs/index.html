@@ -33,16 +33,35 @@
           <h2>検索結果を150件表示(空欄時ランダム)</h2>
         </div>
       </div>
+      <div class="row p-0 m-0">
+        <footer
+          class="col p-0"
+          style="display: flex; justify-content: center; align-items: center;"
+        >
+          <button id="laquo" class="btn btn-light p-2" type="button" id="">
+            &laquo;
+          </button>
+          <button id="raquo" type="button" class="btn btn-light p-2">
+            &raquo;
+          </button>
+        </footer>
+      </div>
       <div class="row">
         <main class="col">
           <div class="card-columns" id="deck"></div>
         </main>
       </div>
       <div class="row p-0 m-0">
-        <footer class="col p-0" style="display: flex;justify-content: center;align-items: center;" >
-
-          <button id="laquo" class="btn btn-light p-2" type="button" id="">&laquo;</button>
-          <button id="raquo" type="button" class="btn btn-light p-2">&raquo;</button>
+        <footer
+          class="col p-0"
+          style="display: flex; justify-content: center; align-items: center;"
+        >
+          <button id="laquo" class="btn btn-light p-2" type="button" id="">
+            &laquo;
+          </button>
+          <button id="raquo" type="button" class="btn btn-light p-2">
+            &raquo;
+          </button>
         </footer>
       </div>
     </div>
@@ -84,10 +103,9 @@
           });
 
         let getData = (word) => {
-
-          var randflag = false
-          if (word == "*"){
-            randflag = true
+          var randflag = false;
+          if (word == "*") {
+            randflag = true;
           }
           let deck = document.getElementById("deck");
           deck.innerHTML = "";
@@ -95,12 +113,12 @@
           let sch = idx.search(sBox.value);
           
           sch
-            .sort((a,b)=>{
-              if(randflag){
-                return Math.random() - 0.5
-              }else{
+            .sort((a, b) => {
+              if (randflag) {
+                return Math.random() - 0.5;
+              } else {
                 
-                return a.score - b.score
+                return a.score - b.score;
               }
             })
             .splice(start, 150)
@@ -141,7 +159,7 @@
 
         let sBox = document.getElementById("sBox");
         sBox.addEventListener("input", (e) => {
-          start = 0
+          start = 0;
           getData(sBox.value);
         });
 
@@ -159,8 +177,8 @@
         laquo.addEventListener("click", (e) => {
           start -= 150;
 
-          if(start < 0){
-            start = 0
+          if (start < 0) {
+            start = 0;
           }
 
           let q = sBox.value == "" ? "*" : sBox.value;
