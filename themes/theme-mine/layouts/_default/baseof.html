@@ -21,7 +21,6 @@
             </a>
           </h1>
         </header>
-        
       </div>
       <div class="row">
         <nav class="col">
@@ -59,36 +58,36 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-
-        let documents = []
-        let idx = null
+        let documents = [];
+        let idx = null;
         axios.get("{{ .Site.BaseURL }}/indexes/my-index.json").then((res) => {
-            documents = res.data;
-            i_dx = lunr(function () {
-              this.ref("uri");
-              this.field("content");
+          documents = res.data;
+          i_dx = lunr(function () {
+            this.ref("uri");
+            this.field("content");
 
-              documents.forEach(function (doc) {
-                this.add(doc);
-              }, this);
-            });
-
+            documents.forEach(function (doc) {
+              this.add(doc);
+            }, this);
+          });
+        });
 
         let getData = (word) => {
           let deck = document.getElementById("deck");
           deck.innerHTML = "";
-          
 
-            let deck = document.getElementById("deck");
-            let sch = idx.search(sBox.value);
-            // console.log(sch);
-            sch
-              .sort(() => {
-                return Math.random() - 0.5;
-              })
-              .slice(0, 25)
-              .forEach((ref) => {
-                axios.get("{{.Site.BaseURL}}"+ "/docs/" + ref.ref).then((get) => {
+          let deck = document.getElementById("deck");
+          let sch = idx.search(sBox.value);
+          // console.log(sch);
+          sch
+            .sort(() => {
+              return Math.random() - 0.5;
+            })
+            .slice(0, 25)
+            .forEach((ref) => {
+              axios
+                .get("{{.Site.BaseURL}}" + "/docs/" + ref.ref)
+                .then((get) => {
                   // console.log(get);
                   let card = document.createElement("article");
                   card.classList.add("card");
@@ -110,10 +109,9 @@
                     }
                   }
                 });
-              });
-            }
-          });
-        })
+            });
+        };
+
         let sBox = document.getElementById("sBox");
         sBox.addEventListener("input", (e) => {
           getData(sBox.value);
