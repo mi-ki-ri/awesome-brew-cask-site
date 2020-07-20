@@ -96,7 +96,7 @@
                   card.appendChild(cardBody);
                   let cardFooter = document.createElement("footer")
                   cardFooter.classList.add("card-footer")
-                  cardFooter.innerHTML = `<a href="#${ref.ref}">${ref.ref}</a>`
+                  cardFooter.innerHTML = `<a href="#${ref.ref.slice(1)}">${ref.ref.slice(1)}</a>`
                   card.appendChild(cardFooter)
                   deck.appendChild(card);
 
