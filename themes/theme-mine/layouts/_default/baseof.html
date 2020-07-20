@@ -59,12 +59,12 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        let getData = (word) => {
-          let deck = document.getElementById("deck");
-          deck.innerHTML = "";
-          axios.get("{{ .Site.BaseURL }}/indexes/my-index.json").then((res) => {
-            var documents = res.data;
-            var idx = lunr(function () {
+
+        let documents = []
+        let idx = null
+        axios.get("{{ .Site.BaseURL }}/indexes/my-index.json").then((res) => {
+            documents = res.data;
+            i_dx = lunr(function () {
               this.ref("uri");
               this.field("content");
 
@@ -72,6 +72,12 @@
                 this.add(doc);
               }, this);
             });
+
+
+        let getData = (word) => {
+          let deck = document.getElementById("deck");
+          deck.innerHTML = "";
+          
 
             let deck = document.getElementById("deck");
             let sch = idx.search(sBox.value);
@@ -105,8 +111,9 @@
                   }
                 });
               });
+            }
           });
-        };
+        })
         let sBox = document.getElementById("sBox");
         sBox.addEventListener("input", (e) => {
           getData(sBox.value);
