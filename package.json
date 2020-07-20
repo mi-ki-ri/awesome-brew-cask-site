@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "hugo && hugo-lunr -i \"content/docs/**\" -o \"static/indexes/my-index.json\" && mv public docs"
-
   },
   "repository": {
     "type": "git",

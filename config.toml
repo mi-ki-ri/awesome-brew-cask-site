@@ -1,4 +1,4 @@
-baseURL = "localhost:1313/"
+baseURL = "https://mi-ki-ri.github.io/awesome-brew-cask-site/"
 languageCode = "ja-jp"
 title = "Awesome Brew Cask"
 theme = "theme-mine"

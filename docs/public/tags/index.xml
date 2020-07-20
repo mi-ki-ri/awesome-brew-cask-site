@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Awesome Brew Cask</title>
+    <link>https://mi-ki-ri.github.io/awesome-brew-cask-site/tags/</link>
+    <description>Recent content in Tags on Awesome Brew Cask</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    
+	<atom:link href="https://mi-ki-ri.github.io/awesome-brew-cask-site/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
