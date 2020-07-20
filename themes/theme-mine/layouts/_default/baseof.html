@@ -37,10 +37,10 @@
           class="col p-0"
           style="display: flex; justify-content: center; align-items: center;"
         >
-          <button id="laquo" class="btn btn-light p-2" type="button" id="">
+          <button id="laquo" class="btn btn-light m-2 p-2" type="button" id="">
             &laquo;
           </button>
-          <button id="raquo" type="button" class="btn btn-light p-2">
+          <button id="raquo" type="button" class="btn btn-light m-2 p-2">
             &raquo;
           </button>
         </footer>
@@ -55,10 +55,10 @@
           class="col p-0"
           style="display: flex; justify-content: center; align-items: center;"
         >
-          <button id="laquo" class="btn btn-light p-2" type="button" id="">
+          <button id="laquo" class="btn btn-light m-2 p-2" type="button" id="">
             &laquo;
           </button>
-          <button id="raquo" type="button" class="btn btn-light p-2">
+          <button id="raquo" type="button" class="btn btn-light m-2 p-2">
             &raquo;
           </button>
         </footer>
@@ -132,12 +132,12 @@
                   cardBody.classList.add("card-body");
                   cardBody.innerHTML = get.data;
                   card.appendChild(cardBody);
-                  let cardFooter = document.createElement("footer");
-                  cardFooter.classList.add("card-footer");
-                  cardFooter.innerHTML = `<a href="#${ref.ref.slice(
-                    1
-                  )}">#${ref.ref.slice(1)}</a>`;
-                  card.appendChild(cardFooter);
+                  // let cardFooter = document.createElement("footer");
+                  // cardFooter.classList.add("card-footer");
+                  // cardFooter.innerHTML = `<a href="#${ref.ref.slice(
+                  //   1
+                  // )}">#${ref.ref.slice(1)}</a>`;
+                  // card.appendChild(cardFooter);
                   deck.appendChild(card);
 
                   var links = document.links;
