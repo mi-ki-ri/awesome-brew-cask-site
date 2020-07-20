@@ -1,4 +1,4 @@
 baseURL = "localhost:1313/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+languageCode = "ja-jp"
+title = "Awesome Brew Cask"
 theme = "book"
