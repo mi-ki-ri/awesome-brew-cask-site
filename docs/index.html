@@ -95,6 +95,10 @@
                   cardBody.classList.add("card-body");
                   cardBody.innerHTML = get.data;
                   card.appendChild(cardBody);
+                  let cardFooter = document.createElement("footer")
+                  cardFooter.classList.add("card-footer")
+                  cardFooter.innerHTML = `<a href="#${ref.ref}">${ref.ref}</a>`
+                  card.appendChild(cardFooter)
                   deck.appendChild(card);
 
                   var links = document.links;
@@ -105,7 +109,8 @@
                     i++
                   ) {
                     if (links[i].hostname != window.location.hostname) {
-                      links[i].target = "_blank";
+                      links[i].target = "_self";
+                      links[i].href =  "#" + ref.ref
                     }
                   }
                 });
