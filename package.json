@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "fetch": "python3 app.py",
+    "fetch": "python app.py",
     "fetch3": "python3 app.py",
     "build": "rm -rf docs && hugo-lunr -i \"content/docs/**\" -o \"static/indexes/my-index.json\" &&  hugo && mv public docs"
   },
