@@ -62,7 +62,7 @@
         let idx = null;
         axios.get("{{ .Site.BaseURL }}/indexes/my-index.json").then((res) => {
           documents = res.data;
-          i_dx = lunr(function () {
+          idx = lunr(function () {
             this.ref("uri");
             this.field("content");
 

@@ -63,7 +63,7 @@
         let idx = null;
         axios.get("https:\/\/mi-ki-ri.github.io\/awesome-brew-cask-site\//indexes/my-index.json").then((res) => {
           documents = res.data;
-          i_dx = lunr(function () {
+          idx = lunr(function () {
             this.ref("uri");
             this.field("content");
 
