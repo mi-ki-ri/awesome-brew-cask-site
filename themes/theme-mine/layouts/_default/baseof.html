@@ -94,7 +94,7 @@
             // .sort(() => {
             //   return Math.random() - 0.5;
             // })
-            .slice(start, 50)
+            .splice(start, 50)
             .forEach((ref) => {
               axios
                 .get("{{.Site.BaseURL}}" + "/docs/" + ref.ref)
