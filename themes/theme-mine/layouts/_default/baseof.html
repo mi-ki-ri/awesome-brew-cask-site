@@ -79,7 +79,7 @@
               })
               .slice(0, 25)
               .forEach((ref) => {
-                axios.get("/docs/" + ref.ref).then((get) => {
+                axios.get("{{.Site.BaseURL}}"+ "/docs/" + ref.ref).then((get) => {
                   // console.log(get);
                   let card = document.createElement("article");
                   card.classList.add("card");

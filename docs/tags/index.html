@@ -79,7 +79,7 @@
               })
               .slice(0, 25)
               .forEach((ref) => {
-                axios.get("/docs/" + ref.ref).then((get) => {
+                axios.get("https:\/\/mi-ki-ri.github.io\/awesome-brew-cask-site\/"+ "/docs/" + ref.ref).then((get) => {
                   
                   let card = document.createElement("article");
                   card.classList.add("card");
