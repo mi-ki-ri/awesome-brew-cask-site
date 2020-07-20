@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "fetch": "rm -rf content/docs && mkdir content/docs && python3 app.py",
-    "build": "rm -rf docs && hugo && hugo-lunr -i \"content/docs/**\" -o \"static/indexes/my-index.json\" && mv public docs"
+    "build": "rm -rf docs && hugo-lunr -i \"content/docs/**\" -o \"static/indexes/my-index.json\" &&  hugo && mv public docs"
   },
   "repository": {
     "type": "git",
