@@ -57,10 +57,10 @@
     <script src="https://unpkg.com/lunr/lunr.js"></script>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
+      document.addEventListener("DOMContentLoaded", async function () {
         let documents = [];
         let idx = null;
-        axios.get("{{ .Site.BaseURL }}/indexes/my-index.json").then((res) => {
+        await axios.get("{{ .Site.BaseURL }}/indexes/my-index.json").then((res) => {
           documents = res.data;
           idx = lunr(function () {
             this.ref("uri");
