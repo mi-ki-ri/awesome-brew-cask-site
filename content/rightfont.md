@@ -1,0 +1,5 @@
+# RightFont
+- [RightFont](https://rightfontapp.com/)
+  -  Professional font manager app for Mac. Font Manager for Future One-click applying font to text in Adobe CC apps, Sketch… Automatically activate fonts for Adobe Creative Cloud apps. Share fonts quickly with Dropbox, iCloud, Google Drive… Search fonts by classification, style or language Multiple font grid views. Themes. Font glyphs. Touchbar. Mini window… Sync Google Fonts, Adobe Typekit Fonts… Use Icon Fonts on your desktop… People love RightFont Simply powerful font manager for your Mac.
+  - Professional and beautiful font manager app, helps preview, sync, install and organize fonts over iCloud, Dropbox. All-in-one Font Manager for business.
+  - `brew cask install RightFont`
