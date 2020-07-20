@@ -1,5 +1,0 @@
-# Screen
-- [Screen](https://screen.so/)
-  - 
-  - 
-  - `brew cask install Screen`

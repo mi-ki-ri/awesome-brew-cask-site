@@ -2,4 +2,4 @@
 - [0xED](https://www.suavetech.com/0xed/)
   - 
   - 
-  - `brew cask install 0xED`
+  - `brew cask install 0xed`
