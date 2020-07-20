@@ -37,6 +37,12 @@
           <div class="card-columns" id="deck"></div>
         </main>
       </div>
+      <div class="row p-0 m-0">
+        <footer class="col p-0 ">
+          <button id="laquo" type="button" class="btn btn-light">&laquo</button>
+      </footer>
+      </div>
+      
     </div>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -58,6 +64,7 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", async function () {
+        var start = 0;
         let documents = [];
         let idx = null;
         await axios.get("{{ .Site.BaseURL }}/indexes/my-index.json").then((res) => {
@@ -82,6 +89,7 @@
             // .sort(() => {
             //   return Math.random() - 0.5;
             // })
+            .slice( start ,50)
             .forEach((ref) => {
               axios
                 .get("{{.Site.BaseURL}}" + "/docs/" + ref.ref)
@@ -120,6 +128,15 @@
           getData(sBox.value);
         });
         getData("*");
+
+        let laquo = document.getElementById("laquo")
+        laquo.addEventListener("click", (e)=>{
+          start += 50
+
+          let q = sBox.value == "" ? "*": sBox.value
+          getData(q)
+        })
+
       });
     </script>
   </body>
