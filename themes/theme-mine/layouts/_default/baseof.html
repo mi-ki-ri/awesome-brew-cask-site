@@ -83,17 +83,23 @@
 
         let getData = (word) => {
 
-          console.log(start)
-
+          var randflag = false
+          if (word == "*"){
+            randflag = true
+          }
           let deck = document.getElementById("deck");
           deck.innerHTML = "";
 
           let sch = idx.search(sBox.value);
           // console.log(sch);
           sch
-            // .sort(() => {
-            //   return Math.random() - 0.5;
-            // })
+            .sort((a,b)=>{
+              if(randflag){
+                return Math.random() - 0.5
+              }else{
+                return a-b
+              }
+            })
             .splice(start, 50)
             .forEach((ref) => {
               axios
